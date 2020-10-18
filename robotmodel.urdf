@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="tank1">
+<robot name="mbot">
   <link name="base_link">
     <visual>
       <geometry>
@@ -7,6 +7,42 @@
       </geometry>
     </visual>
   </link>
+
+   <link name="lwheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.005" radius="0.026"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  
+  <joint name="base_to_lwheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="lwheel"/>
+    <origin xyz="0 0.08 0.026" rpy="1.5708 0 0"/>
+  </joint>
+  
+  <link name="rwheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.005" radius="0.026"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  
+  <joint name="base_to_rwheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="rwheel"/>
+    <origin xyz="0 -0.08 0.026" rpy="-1.5708 0 0"/>
+  </joint>
 
   
   
