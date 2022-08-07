@@ -3,7 +3,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://system_setup/CAD/tanksimple.stl"/>
+        <mesh filename="package://system_setup/CAD/3wheels.stl"/>
       </geometry>
     </visual>
   </link>
